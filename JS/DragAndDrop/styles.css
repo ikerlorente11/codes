@@ -3,15 +3,18 @@ body{
 }
 
 .container{
+	display: flex;
 	background-color: #333;
 	padding: 1rem;
 	margin-top: 1rem;
 }
 
 .draggable{
+	width: 50px;
 	padding: 1rem;
 	background-color: white;
 	border: 1px solid black;
+	margin-right: 1rem;
 	cursor: move;
 }
 
