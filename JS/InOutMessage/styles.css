@@ -1,0 +1,42 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+*{
+    font-size: 1.15rem;;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.container{
+    margin: auto;
+    max-width: 80%;
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.message{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+    opacity: 0;
+    background-color: rgba(255, 0, 0, 0.767);
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.faceinout{
+	animation: fadeInOut 2s;
+}
+
+@keyframes fadeInOut {
+	0% { opacity:0; }
+	33% { opacity:1; }
+	66% { opacity:1; }
+	100% { opacity:0; }
+}
