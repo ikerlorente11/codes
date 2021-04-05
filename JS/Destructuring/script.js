@@ -80,8 +80,8 @@ console.log(personThree)
 */
 
 //Using destructuring objects in functions
-function printUser({ name, age, favoriteFodd = 'Watermelon'}){
-    console.log(`Name is ${name}. Age is ${age}. FavoriteFodd is ${favoriteFodd}`)
+function printUser({ name, age, favoriteFood = 'Watermelon'}){
+    console.log(`Name is ${name}. Age is ${age}. FavoriteFood is ${favoriteFood}`)
 }
 
 printUser(personOne)
