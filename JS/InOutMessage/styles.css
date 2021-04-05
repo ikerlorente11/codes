@@ -20,9 +20,7 @@
 
 .message{
     position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0) scale(0);
+    --scaler: 0;
     padding: 10px;
     opacity: 0;
     background-color: rgba(255, 0, 0, 0.767);
@@ -30,8 +28,44 @@
     z-index: 10;
 }
 
+.message-top-center{
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0) scale(var(--scaler));
+}
+
+.message-top-left{
+    top: 0;
+    left: 0;
+    transform: translate(0, 0) scale(var(--scaler));
+}
+
+.message-top-right{
+    top: 0;
+    right: 0;
+    transform: translate(0, 0) scale(var(--scaler));
+}
+
+.message-bottom-center{
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0) scale(var(--scaler));
+}
+
+.message-bottom-left{
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 0) scale(var(--scaler));
+}
+
+.message-bottom-right{
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 0) scale(var(--scaler));
+}
+
 .faceinout{
-    transform: translate(-50%, 0) scale(1);
+    --scaler: 1;
 	animation: fadeInOut 2s;
 }
 
