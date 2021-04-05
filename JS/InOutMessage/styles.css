@@ -22,7 +22,7 @@
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) scale(0);
     padding: 10px;
     opacity: 0;
     background-color: rgba(255, 0, 0, 0.767);
@@ -31,6 +31,7 @@
 }
 
 .faceinout{
+    transform: translate(-50%, 0) scale(1);
 	animation: fadeInOut 2s;
 }
 
