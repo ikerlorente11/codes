@@ -1,0 +1,105 @@
+:root {
+  --clr-graylight: #cfd8dc;
+  --clr-graymed: #90a4ae;
+
+  --radius: 10em;
+
+  --animation-curve: cubic-bezier(0.34, 1.36, 0.2, 1);
+
+  --switch-width: 5vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.switch-container {
+  width: var(--switch-width);
+  height: calc(var(--switch-width) / 2);
+  border-radius: var(--radius);
+  box-shadow: 5px 5px 15px 5px var(--clr-graylight);
+  position: relative;
+}
+
+.switch-color {
+  width: calc(var(--switch-width) * 0.925);
+  height: calc(var(--switch-width) * 0.425);
+  top: calc((var(--switch-width) - calc(var(--switch-width) * 0.925)) / 2);
+  left: calc((var(--switch-width) - calc(var(--switch-width) * 0.925)) / 2);
+  background: var(--clr-graylight);
+  border-radius: var(--radius);
+  z-index: -1;
+  position: absolute;
+  transition: all 500ms var(--animation-curve);
+}
+
+label {
+  width: calc(var(--switch-width) * 0.425);
+  height: calc(var(--switch-width) * 0.425);
+  top: calc((var(--switch-width) - calc(var(--switch-width) * 0.925)) / 2);
+  left: calc((var(--switch-width) - calc(var(--switch-width) * 0.925)) / 2);
+  border-radius: var(--radius);
+  background: white;
+  position: absolute;
+  box-shadow: 2px 2px 10px 2px var(--clr-graylight);
+  z-index: 99;
+  cursor: pointer;
+}
+
+label::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: calc(var(--switch-width) / 3);
+  content: "\f00d";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--clr-graymed);
+}
+
+label::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: calc(var(--switch-width) / 3);
+  content: "\f00c";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: var(--clr-graymed);
+}
+
+#switch:checked ~ label::before {
+  opacity: 0;
+}
+
+#switch:checked ~ label::after {
+  opacity: 1;
+}
+
+#switch:checked ~ label {
+  transform: translatex(calc(var(--switch-width) / 2)) rotatez(360deg);
+}
+
+#switch:checked ~ .switch-color {
+  background: #00e676;
+}
+
+#switch ~ label {
+  transition: all 1s var(--animation-curve);
+}
+
+input {
+  display: none;
+}
