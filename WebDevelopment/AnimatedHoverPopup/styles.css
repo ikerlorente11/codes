@@ -1,0 +1,62 @@
+:root {
+    /*   color variables */
+    --clr-primary: #6aeeb5;
+    --clr-primary-hover: #29e6a7;
+    --clr-primary-dark: #0a4542;
+    --clr-gray100: #f0f7f8;
+    --clr-gray200: #cfd8dc;
+  
+    /*   border radius */
+    --radius: 0.2rem;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Montserrat, sans-serif;
+    font-size: 40px;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-gray100);
+  }
+  
+  h1 {
+    font-size: 1em;
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--clr-primary);
+  }
+  
+  h1:hover {
+    color: var(--clr-primary-dark);
+  }
+  
+ h1::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    font-size: .5em;
+    color: black;
+    background: white;
+    padding: .5em;
+    border-radius: var(--radius);
+    box-shadow: 0px 0px 10px var(--clr-gray200);
+    left: -45%;
+    top: -90%;
+    clip-path: circle(0rem at center);
+    overflow: hidden;
+    transition: 300ms all ease-in;
+  }
+  
+  h1:hover::before {
+    clip-path: circle(20rem at center);
+    top: -100%;
+  }
+  
