@@ -17,4 +17,10 @@ container.addEventListener('click', () =>{
 
     //Add message to messages list
     message_list.prepend(message);
+
+    let root = document.documentElement;
+    root.style.setProperty('--message-height', "-" + document.querySelector('.message').offsetHeight + "px");
+
+    message_list.classList.remove('uptodown');
+    setTimeout(() => {  message_list.classList.add('uptodown'); }, 0);
 })

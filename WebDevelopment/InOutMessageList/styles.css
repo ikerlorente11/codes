@@ -1,3 +1,7 @@
+:root{
+    --message-height: -45px;
+}
+
 *, *::after, *::before{
     box-sizing: border-box;
 }
@@ -27,7 +31,7 @@
     width: fit-content;
     background-color: transparent;
     /*Optional*/
-    max-height: 200px;
+    max-height: calc(calc(-4 * var(--message-height)) + 20px);
     overflow: hidden;
 }
 
@@ -37,6 +41,16 @@
     background-color: rgba(255, 0, 0, 0.767);
     border-radius: 10px;
     z-index: 10;
+}
+
+.uptodown{
+    animation: uptodown 1s;
+}
+
+@keyframes uptodown {
+	0% { transform: translate(-50%, var(--message-height)); }
+	50% { transform: translate(-50%, 0); }
+    100% { transform: translate(-50%, 0); }
 }
 
 .faceinout{
@@ -49,3 +63,4 @@
 	66% { opacity:1; }
 	100% { opacity:0; }
 }
+
