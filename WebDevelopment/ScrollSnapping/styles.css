@@ -1,0 +1,47 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: y mandatory; /*Snap to the next*/
+    overflow-y: scroll;
+    /*Horizontal snap
+    scroll-snap-type: x proximity; Snap to the closest
+    overflow-x: scroll;
+    display: flex;
+    */
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+section:nth-child(1){
+    background-color: rgb(28, 28, 28);
+    color: green;    
+}
+
+section:nth-child(2){
+    background-color: rgb(38, 38, 38);
+    color: blue;    
+}
+
+section:nth-child(3){
+    background-color: rgb(48, 48, 48);
+    color: yellow;    
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15em;
+}
