@@ -1,8 +1,8 @@
 /* For firefox */
-html{
-    scrollbar-width: thin;
-    /* scrollbar-width: auto; */
-    /* scrollbar-width: none; */
+*{
+    scrollbar-width: thin!important;
+    /* scrollbar-width: auto!important; */
+    /* scrollbar-width: none!important; */
     scrollbar-color: black white;
 }
 
