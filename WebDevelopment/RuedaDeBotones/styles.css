@@ -1,0 +1,190 @@
+:root {
+    --wheel-size: 250px;
+    --button-width: calc(var(--wheel-size) / 7);
+    --button-padding: 0;
+    --button-big: 29%;
+    --button-small: 12%;
+    --button-corner-margin: 10px;
+    --rotation-degrees: -90deg;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.button-wheel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--wheel-size);
+    height: var(--wheel-size);
+    background-color: transparent;
+    transform: rotate(-90deg);
+}
+
+#center-button-wheel{
+    margin: auto;
+}
+
+#bottom-right-button-wheel{
+    bottom: calc(-1 * (var(--wheel-size) / 2 - var(--button-width) / 2 - var(--button-corner-margin)));
+    right: calc(-1 * (var(--wheel-size) / 2 - var(--button-width) / 2 - var(--button-corner-margin)));
+    position: absolute;
+}
+
+#top-right-button-wheel{
+    top: calc(-1 * (var(--wheel-size) / 2 - var(--button-width) / 2 - var(--button-corner-margin)));
+    right: calc(-1 * (var(--wheel-size) / 2 - var(--button-width) / 2 - var(--button-corner-margin)));
+    position: absolute;
+}
+
+#bottom-left-button-wheel{
+    bottom: calc(-1 * (var(--wheel-size) / 2 - var(--button-width) / 2 - var(--button-corner-margin)));
+    left: calc(-1 * (var(--wheel-size) / 2 - var(--button-width) / 2 - var(--button-corner-margin)));
+    position: absolute;
+}
+
+#top-left-button-wheel{
+    top: calc(-1 * (var(--wheel-size) / 2 - var(--button-width) / 2 - var(--button-corner-margin)));
+    left: calc(-1 * (var(--wheel-size) / 2 - var(--button-width) / 2 - var(--button-corner-margin)));
+    position: absolute;
+}
+
+.hiddeable{
+    opacity: 0;
+    padding: 0;
+}
+
+.button{
+    display: flex;
+    margin: 0;
+    border-radius: 50%;
+    border: none;
+    color: rgb(105, 105, 105);
+    cursor: pointer;
+    width: var(--button-width);
+    height: var(--button-width);
+}
+
+.button > svg{
+    width: 100%;
+    height: 100%;
+}
+
+.button1{
+    position: absolute;
+    top: var(--button-small);
+    left: var(--button-big);
+}
+
+.button2{
+    position: absolute;
+    top: var(--button-big);
+    left: var(--button-small);
+}
+
+.button3{
+    position: absolute;
+    left: var(--button-small);
+    bottom: var(--button-big);
+}
+
+.button4{
+    position: absolute;
+    left: var(--button-big);
+    bottom: var(--button-small);
+}
+
+.button5{
+    position: absolute;
+    bottom: var(--button-small);
+    right: var(--button-big);
+}
+
+.button6{
+    position: absolute;
+    bottom: var(--button-big);
+    right: var(--button-small);
+}
+
+.button7{
+    position: absolute;
+    right: var(--button-small);
+    top: var(--button-big);
+}
+
+.button8{
+    position: absolute;
+    right: var(--button-big);
+    top: var(--button-small);
+}
+
+.buttonCenter{
+    z-index: 1;
+}
+
+.spin{
+    transform: rotate(0deg)!important;
+    animation: spin .3s linear;
+}
+
+.spin2{
+    transform: rotate(var(--rotation-degrees))!important;
+    animation: spin2 .3s linear;
+}
+
+.opacity{
+    opacity: 1;
+    width: var(--button-width);
+    animation: opacity .3s linear;
+}
+
+.opacity2{
+    opacity: 0;
+    width: 0;
+    animation: opacity2 .3s linear;
+}
+
+@keyframes spin { 
+    from {
+        transform: rotate(var(--rotation-degrees));
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes spin2 { 
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(var(--rotation-degrees));
+    }
+}
+
+@keyframes opacity { 
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: var(--button-width);
+    }
+}
+
+@keyframes opacity2 { 
+    from {
+        opacity: 1;
+        width: var(--button-width);
+    }
+    to {
+        opacity: 0;
+        width: 0;
+    }
+}
