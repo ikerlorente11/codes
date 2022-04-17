@@ -1,0 +1,128 @@
+:root {
+    --wheel-size: 200px;
+    --button-width: calc(var(--wheel-size) / 5);
+    --rotation-degrees: -90deg;
+    --wheel-corner-margin: 10px;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+.button-wheel{
+    color: black;
+    width: var(--wheel-size);
+    aspect-ratio: 1/1;
+    transform: rotate(-90deg);
+}
+
+.button-wheel-c{
+    position: absolute;
+    top: calc(50% - calc(var(--wheel-size) / 2));
+    left: calc(50% - calc(var(--wheel-size) / 2));
+}
+
+.button-wheel-tl{
+    position: absolute;
+    top: calc(0px - calc(var(--wheel-size) / 2) + calc(var(--button-width) / 2) + var(--wheel-corner-margin));
+    left: calc(0px - calc(var(--wheel-size) / 2) + calc(var(--button-width) / 2) + var(--wheel-corner-margin));
+}
+
+.button-wheel-tr{
+    position: absolute;
+    top: calc(0px - calc(var(--wheel-size) / 2) + calc(var(--button-width) / 2) + var(--wheel-corner-margin));
+    right: calc(0px - calc(var(--wheel-size) / 2) + calc(var(--button-width) / 2) + var(--wheel-corner-margin));
+}
+
+.button-wheel-bl{
+    position: absolute;
+    bottom: calc(0px - calc(var(--wheel-size) / 2) + calc(var(--button-width) / 2) + var(--wheel-corner-margin));
+    left: calc(0px - calc(var(--wheel-size) / 2) + calc(var(--button-width) / 2) + var(--wheel-corner-margin));
+}
+
+.button-wheel-br{
+    position: absolute;
+    bottom: calc(0px - calc(var(--wheel-size) / 2) + calc(var(--button-width) / 2) + var(--wheel-corner-margin));
+    right: calc(0px - calc(var(--wheel-size) / 2) + calc(var(--button-width) / 2) + var(--wheel-corner-margin));
+}
+
+.button{
+    width: var(--button-width);
+    aspect-ratio: 1/1;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg{
+    height: 100%;
+    width: 100%;
+}
+
+.spin{
+    transform: rotate(0deg)!important;
+    animation: spin .3s linear;
+}
+
+.spin2{
+    transform: rotate(var(--rotation-degrees))!important;
+    animation: spin2 .3s linear;
+}
+
+.opacity{
+    opacity: 1;
+    width: var(--button-width);
+    animation: opacity .3s linear;
+}
+
+.opacity2{
+    opacity: 0;
+    width: 0;
+    animation: opacity2 .3s linear;
+}
+
+@keyframes spin { 
+    from {
+        transform: rotate(var(--rotation-degrees));
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes spin2 { 
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(var(--rotation-degrees));
+    }
+}
+
+@keyframes opacity { 
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: var(--button-width);
+    }
+}
+
+@keyframes opacity2 { 
+    from {
+        opacity: 1;
+        width: var(--button-width);
+    }
+    to {
+        opacity: 0;
+        width: 0;
+    }
+}
