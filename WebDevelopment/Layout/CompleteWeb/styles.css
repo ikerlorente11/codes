@@ -29,7 +29,7 @@ body{
     width: 90%;
     height: 100%;
     
-    transition: left .3s;
+    transition: width .3s, left .3s !important;
 }
 
 .header{
