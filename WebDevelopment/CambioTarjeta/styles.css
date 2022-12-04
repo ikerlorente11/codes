@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 500px;
+    height: 500px;
+    background: red;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.card .before{
+    color: white;
+    height: 100%;
+    background: blue;
+    position: absolute;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.card.prev .before{
+    right: 0;
+}
+
+.card.next .before{
+    left: 0;
+}
+
+.card.selected .before{
+    width: 100%;
+    transition: .2s linear;
+}
+
+.button{
+    color: white;
+    font-size: 5rem;
+    background: blue;
+    height: 100px;
+    width: auto;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    text-align: center;
+}
