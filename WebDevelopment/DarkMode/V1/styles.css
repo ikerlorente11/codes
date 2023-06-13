@@ -20,6 +20,11 @@ body {
     font-size: var(--font-size);
 }
 
+body > *{
+    transition-property: background-color, color;
+    transition-duration: 2s;
+}
+
 #wrapper-main {
     margin: 2em;
 }

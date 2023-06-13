@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        Dark mode test
+        <button id="theme-button"><p id="txt-dark">Dark mode</p><p id="txt-light" class="d-none">Light mode</p></button>
+    </nav>
+    <div>
+        <div>Occaecat aute officia culpa quis ipsum dolor ad anim mollit cillum tempor enim quis. Magna irure ipsum aute sunt reprehenderit voluptate dolore in dolor consectetur elit ipsum pariatur. Id sint pariatur in eiusmod pariatur consectetur ad elit occaecat adipisicing dolor. Amet labore mollit qui reprehenderit cupidatat.</div>
+        <div>Occaecat aute officia culpa quis ipsum dolor ad anim mollit cillum tempor enim quis. Magna irure ipsum aute sunt reprehenderit voluptate dolore in dolor consectetur elit ipsum pariatur. Id sint pariatur in eiusmod pariatur consectetur ad elit occaecat adipisicing dolor. Amet labore mollit qui reprehenderit cupidatat.</div>
+        <div>Occaecat aute officia culpa quis ipsum dolor ad anim mollit cillum tempor enim quis. Magna irure ipsum aute sunt reprehenderit voluptate dolore in dolor consectetur elit ipsum pariatur. Id sint pariatur in eiusmod pariatur consectetur ad elit occaecat adipisicing dolor. Amet labore mollit qui reprehenderit cupidatat.</div>
+        <div>Occaecat aute officia culpa quis ipsum dolor ad anim mollit cillum tempor enim quis. Magna irure ipsum aute sunt reprehenderit voluptate dolore in dolor consectetur elit ipsum pariatur. Id sint pariatur in eiusmod pariatur consectetur ad elit occaecat adipisicing dolor. Amet labore mollit qui reprehenderit cupidatat.</div>
+        <div>Occaecat aute officia culpa quis ipsum dolor ad anim mollit cillum tempor enim quis. Magna irure ipsum aute sunt reprehenderit voluptate dolore in dolor consectetur elit ipsum pariatur. Id sint pariatur in eiusmod pariatur consectetur ad elit occaecat adipisicing dolor. Amet labore mollit qui reprehenderit cupidatat.</div>
+        <div>Occaecat aute officia culpa quis ipsum dolor ad anim mollit cillum tempor enim quis. Magna irure ipsum aute sunt reprehenderit voluptate dolore in dolor consectetur elit ipsum pariatur. Id sint pariatur in eiusmod pariatur consectetur ad elit occaecat adipisicing dolor. Amet labore mollit qui reprehenderit cupidatat.</div>
+    </div>
+    <script defer>
+        document.getElementById('theme-button').addEventListener('click', () => {
+            document.querySelector("body").classList.toggle('dark-mode')
+            document.getElementById('txt-dark').classList.toggle('d-none')
+            document.getElementById('txt-light').classList.toggle('d-none')
+        })
+    </script>
+</body>
+</html>

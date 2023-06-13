@@ -1,0 +1,65 @@
+:root {
+    --clr-background: antiquewhite;
+    --clr-nav: aqua;
+    --clr-button: aliceblue;
+    --clr-button-text: black;
+    --clr-container: azure;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 26px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+body > *{
+    transition-property: background-color, color;
+    transition-duration: .3s;
+}
+
+nav{
+    background-color: var(--clr-nav);
+    padding: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > button{
+    border: none;
+    color: var(--clr-button-text);
+    background-color: var(--clr-button);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+body > div{
+    background-color: var(--clr-background);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+body > div > div{
+    background-color: var(--clr-container);
+}
+
+.dark-mode{
+    --clr-background: grey;
+    --clr-nav: rgb(180, 0, 0);
+    --clr-button: rgb(0, 11, 172);
+    --clr-button-text: white;
+    --clr-container: rgb(199, 199, 199);
+}
+
+.d-none{
+    display: none;
+}
