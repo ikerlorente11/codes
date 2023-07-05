@@ -1,0 +1,2 @@
+﻿Pulsador 1 conectado a pin 2 con valores U, M
+DEL coloreado 1 conectado a pin 3 con valores D, R

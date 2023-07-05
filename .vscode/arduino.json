@@ -1,0 +1,5 @@
+{
+    "configuration": "cpu=atmega328",
+    "board": "arduino:avr:nano",
+    "sketch": "Arduino\\Projects\\Screens\\LCD st7735 1.77 TFT 160x128\\Script\\Script.ino"
+}

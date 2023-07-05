@@ -1,0 +1,14 @@
+﻿es
+formato de sangría automática 1
+cierre de inserción automática 0
+inserción automática de punto y coma 0
+permitir sintaxis experta 1
+hacer cumplir los límites de matriz 1
+operadores lógicos de palabras clave 0
+Mostrar programa descarga 1
+número de fuente tipo de letra 2
+número de fuente tamaño de fuente 2
+multiplicador de tamaño de pestaña 2
+Número Placa de circuito 10
+TWI longitud del búfer 32
+Nombre IODevs archivo myIODevs.txt
